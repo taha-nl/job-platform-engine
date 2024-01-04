@@ -1,0 +1,25 @@
+[2023-12-18T09:53:29.192+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: job_process.get_data manual__2023-12-18T09:53:24.731611+00:00 [queued]>
+[2023-12-18T09:53:29.206+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: job_process.get_data manual__2023-12-18T09:53:24.731611+00:00 [queued]>
+[2023-12-18T09:53:29.207+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-18T09:53:29.230+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): get_data> on 2023-12-18 09:53:24.731611+00:00
+[2023-12-18T09:53:29.240+0000] {standard_task_runner.py:57} INFO - Started process 666 to run task
+[2023-12-18T09:53:29.259+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'job_process', 'get_data', 'manual__2023-12-18T09:53:24.731611+00:00', '--job-id', '74', '--raw', '--subdir', 'DAGS_FOLDER/job_process.py', '--cfg-path', '/tmp/tmpl1_7ln76']
+[2023-12-18T09:53:29.267+0000] {standard_task_runner.py:85} INFO - Job 74: Subtask get_data
+[2023-12-18T09:53:29.422+0000] {task_command.py:416} INFO - Running <TaskInstance: job_process.get_data manual__2023-12-18T09:53:24.731611+00:00 [running]> on host 0a5d71a5b82e
+[2023-12-18T09:53:29.638+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='job_process' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2023-12-18T09:53:24.731611+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-18T09:53:24.731611+00:00'
+[2023-12-18T09:53:37.215+0000] {logging_mixin.py:154} INFO - Response HTTP Status Code:  200
+[2023-12-18T09:53:37.550+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 62, in get_data
+    collection.insert_one({f"job_{num}":job})
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/collection.py", line 3501, in __call__
+    raise TypeError(
+TypeError: 'Collection' object is not callable. If you meant to call the 'insert_one' method on a 'Database' object it is failing because no such method exists.
+[2023-12-18T09:53:37.690+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=job_process, task_id=get_data, execution_date=20231218T095324, start_date=20231218T095329, end_date=20231218T095337
+[2023-12-18T09:53:37.882+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 74 for task get_data ('Collection' object is not callable. If you meant to call the 'insert_one' method on a 'Database' object it is failing because no such method exists.; 666)
+[2023-12-18T09:53:37.996+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-18T09:53:38.056+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

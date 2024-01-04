@@ -1,0 +1,798 @@
+[2023-12-15T20:49:53.250+0000] {processor.py:157} INFO - Started process (PID=36) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T20:49:53.314+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T20:49:53.411+0000] {logging_mixin.py:154} INFO - [2023-12-15T20:49:53.402+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T20:50:04.778+0000] {logging_mixin.py:154} INFO - [2023-12-15T20:50:04.744+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T20:50:04.778+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T20:50:04.990+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 11.893 seconds
+[2023-12-15T20:50:35.586+0000] {processor.py:157} INFO - Started process (PID=104) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T20:50:35.588+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T20:50:35.594+0000] {logging_mixin.py:154} INFO - [2023-12-15T20:50:35.594+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T20:50:36.348+0000] {logging_mixin.py:154} INFO - [2023-12-15T20:50:36.346+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T20:50:36.348+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T20:50:36.376+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 0.796 seconds
+[2023-12-15T21:10:40.545+0000] {processor.py:157} INFO - Started process (PID=113) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:10:40.636+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:10:40.641+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:10:40.640+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:10:47.369+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:10:47.363+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:10:47.369+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:10:47.421+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 6.990 seconds
+[2023-12-15T21:11:18.551+0000] {processor.py:157} INFO - Started process (PID=181) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:11:18.576+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:11:18.598+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:11:18.597+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:11:21.348+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:11:21.333+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:11:21.348+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:11:21.468+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 3.046 seconds
+[2023-12-15T21:11:51.930+0000] {processor.py:157} INFO - Started process (PID=238) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:11:51.936+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:11:51.942+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:11:51.942+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:11:53.984+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:11:53.981+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:11:53.985+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:11:54.053+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 2.132 seconds
+[2023-12-15T21:12:27.365+0000] {processor.py:157} INFO - Started process (PID=289) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:12:27.370+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:12:27.380+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:12:27.380+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:12:29.402+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:12:29.396+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:12:29.403+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:12:29.449+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 2.103 seconds
+[2023-12-15T21:13:00.271+0000] {processor.py:157} INFO - Started process (PID=342) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:13:00.274+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:13:00.279+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:13:00.278+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:13:02.330+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:13:02.323+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:13:02.332+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:13:02.411+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 2.150 seconds
+[2023-12-15T21:13:36.529+0000] {processor.py:157} INFO - Started process (PID=399) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:13:36.542+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:13:36.561+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:13:36.556+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:13:40.733+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:13:40.730+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:13:40.734+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:13:40.897+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 4.444 seconds
+[2023-12-15T21:14:11.222+0000] {processor.py:157} INFO - Started process (PID=458) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:14:11.240+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:14:11.269+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:14:11.268+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:14:16.807+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:14:16.792+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:14:16.807+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:14:16.889+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 5.696 seconds
+[2023-12-15T21:14:47.924+0000] {processor.py:157} INFO - Started process (PID=517) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:14:47.927+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:14:47.934+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:14:47.934+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:14:54.302+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:14:54.279+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:14:54.319+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:14:54.613+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 6.701 seconds
+[2023-12-15T21:15:25.139+0000] {processor.py:157} INFO - Started process (PID=582) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:15:25.148+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:15:25.164+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:15:25.163+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:15:27.899+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:15:27.894+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:15:27.900+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:15:27.947+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 2.827 seconds
+[2023-12-15T21:15:58.218+0000] {processor.py:157} INFO - Started process (PID=643) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:15:58.220+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:15:58.228+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:15:58.227+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:15:59.585+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:15:59.570+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:15:59.585+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:15:59.645+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 1.438 seconds
+[2023-12-15T21:16:41.839+0000] {processor.py:157} INFO - Started process (PID=691) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:16:41.852+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:16:41.878+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:16:41.877+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:16:48.758+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:16:48.705+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:16:48.760+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:16:48.996+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 7.305 seconds
+[2023-12-15T21:17:19.228+0000] {processor.py:157} INFO - Started process (PID=751) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:17:19.230+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:17:19.235+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:17:19.234+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:17:20.663+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:17:20.657+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:17:20.664+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:17:20.698+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 1.485 seconds
+[2023-12-15T21:22:42.873+0000] {processor.py:157} INFO - Started process (PID=57) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:22:42.881+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:22:42.925+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:22:42.924+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:23:02.711+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:23:02.677+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:23:02.712+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:23:02.917+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 20.150 seconds
+[2023-12-15T21:27:19.730+0000] {processor.py:157} INFO - Started process (PID=55) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:27:19.875+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:27:19.886+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:27:19.885+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:27:50.159+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:27:50.157+0000] {timeout.py:68} ERROR - Process timed out, PID: 55
+[2023-12-15T21:27:50.337+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:27:50.176+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 2, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/__init__.py", line 48, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/api.py", line 47, in <module>
+    from pandas.core.groupby import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/groupby/generic.py", line 77, in <module>
+    from pandas.core.frame import DataFrame
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 182, in <module>
+    from pandas.core.generic import NDFrame
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 138, in <module>
+    from pandas.core import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexing.py", line 77, in <module>
+    from pandas.core.indexes.api import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/api.py", line 27, in <module>
+    from pandas.core.indexes.interval import IntervalIndex
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/interval.py", line 89, in <module>
+    from pandas.core.indexes.multi import MultiIndex
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/job_process.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.7.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.7.3/best-practices.html#reducing-dag-complexity, PID: 55
+[2023-12-15T21:27:50.347+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:27:50.773+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 31.207 seconds
+[2023-12-15T21:28:53.406+0000] {processor.py:157} INFO - Started process (PID=125) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:28:53.452+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:28:53.497+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:28:53.497+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:29:05.034+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:29:05.002+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:29:05.035+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:29:05.284+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 11.952 seconds
+[2023-12-15T21:29:43.785+0000] {processor.py:157} INFO - Started process (PID=186) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:29:43.804+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:29:43.818+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:29:43.817+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:29:51.513+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:29:51.500+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:29:51.524+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:29:51.614+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 7.945 seconds
+[2023-12-15T21:35:09.339+0000] {processor.py:157} INFO - Started process (PID=49) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:35:09.356+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:35:09.374+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:35:09.374+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:35:28.617+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:35:28.586+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:35:28.622+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:35:28.889+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 19.627 seconds
+[2023-12-15T21:36:03.715+0000] {processor.py:157} INFO - Started process (PID=118) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:36:03.743+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:36:03.776+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:36:03.775+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:36:11.477+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:36:11.472+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:36:11.509+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:36:11.700+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 8.054 seconds
+[2023-12-15T21:36:46.706+0000] {processor.py:157} INFO - Started process (PID=176) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:36:46.729+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:36:46.754+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:36:46.753+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:36:51.622+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:36:51.615+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:36:51.623+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:36:51.720+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 5.068 seconds
+[2023-12-15T21:37:21.952+0000] {processor.py:157} INFO - Started process (PID=234) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:37:21.959+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:37:21.981+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:37:21.980+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:37:26.159+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:37:26.141+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:37:26.160+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:37:26.256+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 4.334 seconds
+[2023-12-15T21:38:09.436+0000] {processor.py:157} INFO - Started process (PID=283) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:38:09.450+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:38:09.489+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:38:09.487+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:38:12.679+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:38:12.673+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:38:12.686+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:38:12.779+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 3.465 seconds
+[2023-12-15T21:38:43.325+0000] {processor.py:157} INFO - Started process (PID=343) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:38:43.373+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:38:43.408+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:38:43.395+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:38:48.473+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:38:48.459+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:38:48.475+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:38:48.599+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 5.333 seconds
+[2023-12-15T21:39:22.820+0000] {processor.py:157} INFO - Started process (PID=384) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:39:22.828+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:39:22.860+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:39:22.859+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:39:32.739+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:39:32.734+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:39:32.740+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:39:32.857+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 10.076 seconds
+[2023-12-15T21:40:03.084+0000] {processor.py:157} INFO - Started process (PID=451) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:40:03.088+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:40:03.106+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:40:03.105+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:40:06.328+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:40:06.308+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:40:06.329+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:40:06.421+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 3.355 seconds
+[2023-12-15T21:44:54.456+0000] {processor.py:157} INFO - Started process (PID=50) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:44:54.481+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:44:54.511+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:44:54.510+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:45:22.506+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:45:22.468+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:45:22.507+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:45:22.947+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 28.594 seconds
+[2023-12-15T21:46:45.429+0000] {processor.py:157} INFO - Started process (PID=127) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:46:45.460+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:46:45.529+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:46:45.502+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:47:02.869+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:47:02.813+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 119, in <module>
+    my_dag = my_simple_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3843, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 25, in my_simple_dag
+    @task("get_glassdoor_job")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/python.py", line 72, in python_task
+    return task_decorator_factory(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 626, in task_decorator_factory
+    decorator = _TaskDecorator(
+  File "<attrs generated init airflow.decorators.base._TaskDecorator>", line 8, in __init__
+    _setattr('multiple_outputs', __attr_factory_multiple_outputs(self))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 311, in _infer_multiple_outputs
+    if "return" not in self.function.__annotations__:
+AttributeError: 'str' object has no attribute '__annotations__'
+[2023-12-15T21:47:02.870+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:47:03.114+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 17.779 seconds
+[2023-12-15T21:47:39.713+0000] {processor.py:157} INFO - Started process (PID=164) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:47:39.729+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:47:39.760+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:47:39.747+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:53:44.316+0000] {processor.py:157} INFO - Started process (PID=64) to work on /opt/airflow/dags/job_process.py
+[2023-12-15T21:53:44.328+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/job_process.py for tasks to queue
+[2023-12-15T21:53:44.358+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:53:44.358+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/job_process.py
+[2023-12-15T21:54:14.425+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:54:14.424+0000] {timeout.py:68} ERROR - Process timed out, PID: 64
+[2023-12-15T21:54:14.445+0000] {logging_mixin.py:154} INFO - [2023-12-15T21:54:14.426+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/job_process.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/job_process.py", line 2, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/__init__.py", line 48, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/api.py", line 47, in <module>
+    from pandas.core.groupby import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/dag_processing/manager.py", line 470, in _exit_gracefully
+    self.log.debug("Current Stacktrace is: %s", "\n".join(map(str, inspect.stack())))
+  File "/usr/local/lib/python3.8/inspect.py", line 1526, in stack
+    return getouterframes(sys._getframe(1), context)
+  File "/usr/local/lib/python3.8/inspect.py", line 1503, in getouterframes
+    frameinfo = (frame,) + getframeinfo(frame, context)
+  File "/usr/local/lib/python3.8/inspect.py", line 1477, in getframeinfo
+    lines, lnum = findsource(frame)
+  File "/usr/local/lib/python3.8/inspect.py", line 792, in findsource
+    module = getmodule(object, file)
+  File "/usr/local/lib/python3.8/inspect.py", line 754, in getmodule
+    os.path.realpath(f)] = module.__name__
+  File "/usr/local/lib/python3.8/posixpath.py", line 391, in realpath
+    path, ok = _joinrealpath(filename[:0], filename, {})
+  File "/usr/local/lib/python3.8/posixpath.py", line 425, in _joinrealpath
+    if not islink(newpath):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/dag_processing/manager.py", line 470, in _exit_gracefully
+    self.log.debug("Current Stacktrace is: %s", "\n".join(map(str, inspect.stack())))
+  File "/usr/local/lib/python3.8/inspect.py", line 1526, in stack
+    return getouterframes(sys._getframe(1), context)
+  File "/usr/local/lib/python3.8/inspect.py", line 1503, in getouterframes
+    frameinfo = (frame,) + getframeinfo(frame, context)
+  File "/usr/local/lib/python3.8/inspect.py", line 1477, in getframeinfo
+    lines, lnum = findsource(frame)
+  File "/usr/local/lib/python3.8/inspect.py", line 792, in findsource
+    module = getmodule(object, file)
+  File "/usr/local/lib/python3.8/inspect.py", line 747, in getmodule
+    if f == _filesbymodname.get(modname, None):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/job_process.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.7.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.7.3/best-practices.html#reducing-dag-complexity, PID: 64
+[2023-12-15T21:54:14.446+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/job_process.py
+[2023-12-15T21:54:14.573+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/job_process.py took 30.379 seconds
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

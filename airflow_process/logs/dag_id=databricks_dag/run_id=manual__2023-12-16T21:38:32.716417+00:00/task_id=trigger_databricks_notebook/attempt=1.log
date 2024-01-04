@@ -1,0 +1,48 @@
+[2023-12-16T21:38:35.532+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook manual__2023-12-16T21:38:32.716417+00:00 [queued]>
+[2023-12-16T21:38:35.544+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook manual__2023-12-16T21:38:32.716417+00:00 [queued]>
+[2023-12-16T21:38:35.544+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-16T21:38:35.575+0000] {taskinstance.py:1382} INFO - Executing <Task(DatabricksRunNowOperator): trigger_databricks_notebook> on 2023-12-16 21:38:32.716417+00:00
+[2023-12-16T21:38:35.591+0000] {standard_task_runner.py:57} INFO - Started process 785 to run task
+[2023-12-16T21:38:35.596+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'databricks_dag', 'trigger_databricks_notebook', 'manual__2023-12-16T21:38:32.716417+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/databricks_test.py', '--cfg-path', '/tmp/tmp02gngtcb']
+[2023-12-16T21:38:35.606+0000] {standard_task_runner.py:85} INFO - Job 60: Subtask trigger_databricks_notebook
+[2023-12-16T21:38:35.735+0000] {task_command.py:416} INFO - Running <TaskInstance: databricks_dag.trigger_databricks_notebook manual__2023-12-16T21:38:32.716417+00:00 [running]> on host 2d83c0298000
+[2023-12-16T21:38:35.901+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='databricks_dag' AIRFLOW_CTX_TASK_ID='trigger_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2023-12-16T21:38:32.716417+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-16T21:38:32.716417+00:00'
+[2023-12-16T21:38:35.920+0000] {base.py:73} INFO - Using connection ID 'databricks_default' for task execution.
+[2023-12-16T21:38:35.921+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:38:36.327+0000] {databricks.py:73} INFO - Run submitted with run_id: 883303870872400
+[2023-12-16T21:38:36.330+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:38:36.598+0000] {databricks.py:78} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/751742865096775/run/883303870872400
+[2023-12-16T21:38:36.601+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:38:36.871+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': ''}
+[2023-12-16T21:38:36.872+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/751742865096775/run/883303870872400
+[2023-12-16T21:38:36.873+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:39:06.879+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:39:07.103+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': None, 'state_message': 'In run'}
+[2023-12-16T21:39:07.104+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/751742865096775/run/883303870872400
+[2023-12-16T21:39:07.104+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:39:37.135+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:39:37.357+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': None, 'state_message': 'In run'}
+[2023-12-16T21:39:37.365+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/751742865096775/run/883303870872400
+[2023-12-16T21:39:37.365+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:40:07.395+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:40:07.604+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': None, 'state_message': 'In run'}
+[2023-12-16T21:40:07.606+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/751742865096775/run/883303870872400
+[2023-12-16T21:40:07.607+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:40:37.634+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:40:37.838+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': None, 'state_message': 'In run'}
+[2023-12-16T21:40:37.840+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/751742865096775/run/883303870872400
+[2023-12-16T21:40:37.841+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:41:07.871+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:41:08.119+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': None, 'state_message': 'In run'}
+[2023-12-16T21:41:08.125+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/751742865096775/run/883303870872400
+[2023-12-16T21:41:08.126+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:41:38.158+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:41:38.374+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': None, 'state_message': 'In run'}
+[2023-12-16T21:41:38.375+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/751742865096775/run/883303870872400
+[2023-12-16T21:41:38.375+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:42:08.405+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:42:08.620+0000] {databricks.py:83} INFO - trigger_databricks_notebook completed successfully.
+[2023-12-16T21:42:08.623+0000] {databricks.py:84} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/751742865096775/run/883303870872400
+[2023-12-16T21:42:08.657+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=databricks_dag, task_id=trigger_databricks_notebook, execution_date=20231216T213832, start_date=20231216T213835, end_date=20231216T214208
+[2023-12-16T21:42:08.716+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-16T21:42:08.740+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

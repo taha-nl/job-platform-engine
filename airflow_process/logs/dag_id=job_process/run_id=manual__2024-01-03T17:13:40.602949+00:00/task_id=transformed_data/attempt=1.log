@@ -1,0 +1,40 @@
+[2024-01-03T17:15:14.652+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: job_process.transformed_data manual__2024-01-03T17:13:40.602949+00:00 [queued]>
+[2024-01-03T17:15:14.671+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: job_process.transformed_data manual__2024-01-03T17:13:40.602949+00:00 [queued]>
+[2024-01-03T17:15:14.676+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-03T17:15:14.702+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): transformed_data> on 2024-01-03 17:13:40.602949+00:00
+[2024-01-03T17:15:14.727+0000] {standard_task_runner.py:60} INFO - Started process 5445 to run task
+[2024-01-03T17:15:14.747+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'job_process', 'transformed_data', 'manual__2024-01-03T17:13:40.602949+00:00', '--job-id', '176', '--raw', '--subdir', 'DAGS_FOLDER/job_process.py', '--cfg-path', '/tmp/tmpx0l91zml']
+[2024-01-03T17:15:14.758+0000] {standard_task_runner.py:88} INFO - Job 176: Subtask transformed_data
+[2024-01-03T17:15:14.884+0000] {task_command.py:423} INFO - Running <TaskInstance: job_process.transformed_data manual__2024-01-03T17:13:40.602949+00:00 [running]> on host f01482236d7b
+[2024-01-03T17:15:15.060+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='job_process' AIRFLOW_CTX_TASK_ID='transformed_data' AIRFLOW_CTX_EXECUTION_DATE='2024-01-03T17:13:40.602949+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-03T17:13:40.602949+00:00'
+[2024-01-03T17:15:17.181+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 200, in transform_data
+    df_rekrute["end_date"] = pd.to_datetime(df_rekrute["end_date"])
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/tools/datetimes.py", line 1046, in to_datetime
+    cache_array = _maybe_cache(arg, format, cache, convert_listlike)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/tools/datetimes.py", line 250, in _maybe_cache
+    cache_dates = convert_listlike(unique_dates, format)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/tools/datetimes.py", line 453, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/tools/datetimes.py", line 484, in _array_strptime_with_fallback
+    result, timezones = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 530, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 351, in pandas._libs.tslibs.strptime.array_strptime
+ValueError: time data "14/02/2024" doesn't match format "%m/%d/%Y", at position 1. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+[2024-01-03T17:15:17.205+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=job_process, task_id=transformed_data, execution_date=20240103T171340, start_date=20240103T171514, end_date=20240103T171517
+[2024-01-03T17:15:17.237+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 176 for task transformed_data (time data "14/02/2024" doesn't match format "%m/%d/%Y", at position 1. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.; 5445)
+[2024-01-03T17:15:17.291+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-01-03T17:15:17.357+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

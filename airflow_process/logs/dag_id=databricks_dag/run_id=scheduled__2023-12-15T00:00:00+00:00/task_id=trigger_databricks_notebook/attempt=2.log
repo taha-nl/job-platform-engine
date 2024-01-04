@@ -1,0 +1,33 @@
+[2023-12-16T21:06:09.082+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-16T21:06:09.104+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-16T21:06:09.105+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 2
+[2023-12-16T21:06:09.191+0000] {taskinstance.py:1382} INFO - Executing <Task(DatabricksSubmitRunOperator): trigger_databricks_notebook> on 2023-12-15 00:00:00+00:00
+[2023-12-16T21:06:09.214+0000] {standard_task_runner.py:57} INFO - Started process 334 to run task
+[2023-12-16T21:06:09.302+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'databricks_dag', 'trigger_databricks_notebook', 'scheduled__2023-12-15T00:00:00+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/databricks_test.py', '--cfg-path', '/tmp/tmpfr_sdla1']
+[2023-12-16T21:06:09.304+0000] {standard_task_runner.py:85} INFO - Job 53: Subtask trigger_databricks_notebook
+[2023-12-16T21:06:11.653+0000] {task_command.py:416} INFO - Running <TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [running]> on host 2d83c0298000
+[2023-12-16T21:06:13.266+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='databricks_dag' AIRFLOW_CTX_TASK_ID='trigger_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2023-12-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-15T00:00:00+00:00'
+[2023-12-16T21:06:13.969+0000] {base.py:73} INFO - Using connection ID 'databricks_default' for task execution.
+[2023-12-16T21:06:13.969+0000] {databricks.py:177} INFO - Using basic auth. 
+[2023-12-16T21:06:17.372+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 203, in _do_api_call
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://adb-2256532642969647.7.azuredatabricks.net/api/2.0/jobs/runs/submit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/operators/databricks.py", line 315, in execute
+    self.run_id = hook.submit_run(self.json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 247, in submit_run
+    response = self._do_api_call(SUBMIT_RUN_ENDPOINT, json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 209, in _do_api_call
+    raise AirflowException(
+airflow.exceptions.AirflowException: Response: b'{"error_code":"403","message":"Invalid access token."}', Status Code: 403
+[2023-12-16T21:06:17.494+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=databricks_dag, task_id=trigger_databricks_notebook, execution_date=20231215T000000, start_date=20231216T210609, end_date=20231216T210617
+[2023-12-16T21:06:18.047+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 53 for task trigger_databricks_notebook (Response: b'{"error_code":"403","message":"Invalid access token."}', Status Code: 403; 334)
+[2023-12-16T21:06:18.203+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-16T21:06:18.898+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

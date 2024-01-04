@@ -1,0 +1,36 @@
+[2024-01-04T08:35:58.263+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: job_process.get_rekrute_data scheduled__2024-01-03T00:00:00+00:00 [queued]>
+[2024-01-04T08:35:58.371+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: job_process.get_rekrute_data scheduled__2024-01-03T00:00:00+00:00 [queued]>
+[2024-01-04T08:35:58.382+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-04T08:35:58.545+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): get_rekrute_data> on 2024-01-03 00:00:00+00:00
+[2024-01-04T08:35:58.647+0000] {standard_task_runner.py:60} INFO - Started process 5654 to run task
+[2024-01-04T08:35:58.700+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'job_process', 'get_rekrute_data', 'scheduled__2024-01-03T00:00:00+00:00', '--job-id', '181', '--raw', '--subdir', 'DAGS_FOLDER/job_process.py', '--cfg-path', '/tmp/tmp8jvoz_t7']
+[2024-01-04T08:35:58.786+0000] {standard_task_runner.py:88} INFO - Job 181: Subtask get_rekrute_data
+[2024-01-04T08:35:59.474+0000] {task_command.py:423} INFO - Running <TaskInstance: job_process.get_rekrute_data scheduled__2024-01-03T00:00:00+00:00 [running]> on host f01482236d7b
+[2024-01-04T08:36:00.453+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='job_process' AIRFLOW_CTX_TASK_ID='get_rekrute_data' AIRFLOW_CTX_EXECUTION_DATE='2024-01-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-03T00:00:00+00:00'
+[2024-01-04T08:36:52.949+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 89, in get_rekrute_data
+    collection = mongo_connection("rekrute_collection")
+  File "/opt/airflow/dags/job_process.py", line 19, in mongo_connection
+    mongoclient = pymongo.MongoClient("mongodb+srv://mongoinpproject:FWLCihjxFGG4UL8W@cluster0.skjn4mk.mongodb.net/?retryWrites=true&w=majority")
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 771, in __init__
+    res = uri_parser.parse_uri(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/srv_resolver.py", line 131, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/srv_resolver.py", line 111, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pymongo/srv_resolver.py", line 105, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.123 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.
+[2024-01-04T08:36:52.984+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=job_process, task_id=get_rekrute_data, execution_date=20240103T000000, start_date=20240104T083558, end_date=20240104T083652
+[2024-01-04T08:36:53.017+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 181 for task get_rekrute_data (The resolution lifetime expired after 21.123 seconds: Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; Server Do53:127.0.0.11@53 answered The DNS operation timed out.; 5654)
+[2024-01-04T08:36:53.046+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-01-04T08:36:53.076+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
