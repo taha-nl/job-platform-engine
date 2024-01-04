@@ -1,0 +1,184 @@
+[2023-12-16T21:03:58.099+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-16T21:03:58.141+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-16T21:03:58.141+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-12-16T21:03:58.196+0000] {taskinstance.py:1382} INFO - Executing <Task(DatabricksSubmitRunOperator): trigger_databricks_notebook> on 2023-12-15 00:00:00+00:00
+[2023-12-16T21:03:58.208+0000] {standard_task_runner.py:57} INFO - Started process 300 to run task
+[2023-12-16T21:03:58.244+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'databricks_dag', 'trigger_databricks_notebook', 'scheduled__2023-12-15T00:00:00+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/databricks_test.py', '--cfg-path', '/tmp/tmpuzzbceq9']
+[2023-12-16T21:03:58.255+0000] {standard_task_runner.py:85} INFO - Job 52: Subtask trigger_databricks_notebook
+[2023-12-16T21:03:58.388+0000] {task_command.py:416} INFO - Running <TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [running]> on host 2d83c0298000
+[2023-12-16T21:03:58.796+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='databricks_dag' AIRFLOW_CTX_TASK_ID='trigger_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2023-12-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-15T00:00:00+00:00'
+[2023-12-16T21:03:58.847+0000] {base.py:73} INFO - Using connection ID 'databricks_default' for task execution.
+[2023-12-16T21:03:58.848+0000] {databricks.py:177} INFO - Using basic auth. 
+[2023-12-16T21:03:59.507+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 203, in _do_api_call
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://adb-2256532642969647.7.azuredatabricks.net/api/2.0/jobs/runs/submit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/operators/databricks.py", line 315, in execute
+    self.run_id = hook.submit_run(self.json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 247, in submit_run
+    response = self._do_api_call(SUBMIT_RUN_ENDPOINT, json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 209, in _do_api_call
+    raise AirflowException(
+airflow.exceptions.AirflowException: Response: b'{"error_code":"403","message":"Invalid access token."}', Status Code: 403
+[2023-12-16T21:03:59.568+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=databricks_dag, task_id=trigger_databricks_notebook, execution_date=20231215T000000, start_date=20231216T210358, end_date=20231216T210359
+[2023-12-16T21:03:59.665+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 52 for task trigger_databricks_notebook (Response: b'{"error_code":"403","message":"Invalid access token."}', Status Code: 403; 300)
+[2023-12-16T21:03:59.708+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-16T21:03:59.835+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-12-16T21:26:43.176+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-16T21:26:43.200+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-16T21:26:43.201+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-16T21:26:43.223+0000] {taskinstance.py:1382} INFO - Executing <Task(DatabricksSubmitRunOperator): trigger_databricks_notebook> on 2023-12-15 00:00:00+00:00
+[2023-12-16T21:26:43.234+0000] {standard_task_runner.py:57} INFO - Started process 618 to run task
+[2023-12-16T21:26:43.240+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'databricks_dag', 'trigger_databricks_notebook', 'scheduled__2023-12-15T00:00:00+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/databricks_test.py', '--cfg-path', '/tmp/tmprrklbt6z']
+[2023-12-16T21:26:43.248+0000] {standard_task_runner.py:85} INFO - Job 57: Subtask trigger_databricks_notebook
+[2023-12-16T21:26:43.330+0000] {task_command.py:416} INFO - Running <TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [running]> on host 2d83c0298000
+[2023-12-16T21:26:43.457+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='databricks_dag' AIRFLOW_CTX_TASK_ID='trigger_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2023-12-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-15T00:00:00+00:00'
+[2023-12-16T21:26:43.478+0000] {base.py:73} INFO - Using connection ID 'databricks_default' for task execution.
+[2023-12-16T21:26:43.479+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:26:43.949+0000] {databricks.py:73} INFO - Run submitted with run_id: 191155217129045
+[2023-12-16T21:26:43.951+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:26:44.129+0000] {databricks.py:78} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:26:44.130+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:26:44.297+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': ''}
+[2023-12-16T21:26:44.299+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:26:44.299+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:27:14.327+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:27:14.757+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:27:14.758+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:27:14.758+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:27:44.786+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:27:45.049+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:27:45.072+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:27:45.074+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:28:15.111+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:28:15.374+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:28:15.375+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:28:15.375+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:28:45.404+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:28:45.614+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:28:45.615+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:28:45.615+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:29:15.643+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:29:15.813+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:29:15.814+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:29:15.814+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:29:45.843+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:29:46.030+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:29:46.031+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:29:46.032+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:30:16.061+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:30:16.316+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:30:16.318+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:30:16.319+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:30:46.351+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:30:46.602+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:30:46.606+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:30:46.607+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:31:16.635+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:31:16.885+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:31:16.886+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:31:16.886+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:31:46.916+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:31:47.137+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:31:47.139+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:31:47.140+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:32:17.171+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:32:17.361+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:32:17.362+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:32:17.362+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:32:47.391+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:32:47.583+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:32:47.584+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:32:47.584+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:33:17.600+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:33:17.854+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:33:17.855+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:33:17.855+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:33:47.885+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:33:48.151+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:33:48.153+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:33:48.153+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:34:18.183+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:34:18.369+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:34:18.370+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:34:18.371+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:34:48.399+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:34:48.583+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:34:48.585+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:34:48.585+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:35:18.610+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:35:18.859+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:35:18.860+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:35:18.860+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:35:48.891+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:35:49.116+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:35:49.120+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:35:49.120+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:36:19.151+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:36:19.385+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:36:19.386+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/94917350752602/run/191155217129045
+[2023-12-16T21:36:19.386+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:36:41.501+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2023-12-16T21:36:41.506+0000] {process_utils.py:131} INFO - Sending 15 to group 618. PIDs of all processes in the group: [618]
+[2023-12-16T21:36:41.507+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 618
+[2023-12-16T21:36:41.507+0000] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-12-16T21:36:41.518+0000] {base.py:73} INFO - Using connection ID 'databricks_default' for task execution.
+[2023-12-16T21:36:41.519+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:36:41.758+0000] {databricks.py:321} INFO - Task: trigger_databricks_notebook with run_id: 191155217129045 was requested to be cancelled.
+[2023-12-16T21:36:41.783+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/operators/databricks.py", line 316, in execute
+    _handle_databricks_operator_execution(self, hook, self.log, context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/operators/databricks.py", line 93, in _handle_databricks_operator_execution
+    time.sleep(operator.polling_period_seconds)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1634, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-12-16T21:36:41.790+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=databricks_dag, task_id=trigger_databricks_notebook, execution_date=20231215T000000, start_date=20231216T212643, end_date=20231216T213641
+[2023-12-16T21:36:41.809+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 57 for task trigger_databricks_notebook ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(databricks_dag, trigger_databricks_notebook, scheduled__2023-12-15T00:00:00+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'trigger_databricks_notebook', 'dag_id': 'databricks_dag', 'run_id': 'scheduled__2023-12-15T00:00:00+00:00', 'map_index': -1, 'start_date': datetime.datetime(2023, 12, 16, 21, 26, 43, 188295, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2023, 12, 16, 21, 36, 41, 789839, tzinfo=Timezone('UTC')), 'duration': 598}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 618)
+[2023-12-16T21:36:41.823+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=618, status='terminated', exitcode=1, started='21:26:43') (618) terminated with exit code 1
+[2023-12-16T21:37:35.185+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-16T21:37:35.203+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-16T21:37:35.203+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-16T21:37:35.244+0000] {taskinstance.py:1382} INFO - Executing <Task(DatabricksRunNowOperator): trigger_databricks_notebook> on 2023-12-15 00:00:00+00:00
+[2023-12-16T21:37:35.254+0000] {standard_task_runner.py:57} INFO - Started process 767 to run task
+[2023-12-16T21:37:35.266+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'databricks_dag', 'trigger_databricks_notebook', 'scheduled__2023-12-15T00:00:00+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/databricks_test.py', '--cfg-path', '/tmp/tmp2re_84w2']
+[2023-12-16T21:37:35.275+0000] {standard_task_runner.py:85} INFO - Job 59: Subtask trigger_databricks_notebook
+[2023-12-16T21:37:35.573+0000] {task_command.py:416} INFO - Running <TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2023-12-15T00:00:00+00:00 [running]> on host 2d83c0298000
+[2023-12-16T21:37:36.111+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='databricks_dag' AIRFLOW_CTX_TASK_ID='trigger_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2023-12-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-15T00:00:00+00:00'
+[2023-12-16T21:37:36.134+0000] {base.py:73} INFO - Using connection ID 'databricks_default' for task execution.
+[2023-12-16T21:37:36.135+0000] {databricks.py:177} INFO - Using basic auth. 
+[2023-12-16T21:37:36.410+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 203, in _do_api_call
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://adb-2256532642969647.7.azuredatabricks.net/api/2.0/jobs/run-now
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/operators/databricks.py", line 510, in execute
+    self.run_id = hook.run_now(self.json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 235, in run_now
+    response = self._do_api_call(RUN_NOW_ENDPOINT, json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 209, in _do_api_call
+    raise AirflowException(
+airflow.exceptions.AirflowException: Response: b'{"error_code":"403","message":"Invalid access token."}', Status Code: 403
+[2023-12-16T21:37:36.416+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=databricks_dag, task_id=trigger_databricks_notebook, execution_date=20231215T000000, start_date=20231216T213735, end_date=20231216T213736
+[2023-12-16T21:37:36.433+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 59 for task trigger_databricks_notebook (Response: b'{"error_code":"403","message":"Invalid access token."}', Status Code: 403; 767)
+[2023-12-16T21:37:36.474+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-16T21:37:36.530+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

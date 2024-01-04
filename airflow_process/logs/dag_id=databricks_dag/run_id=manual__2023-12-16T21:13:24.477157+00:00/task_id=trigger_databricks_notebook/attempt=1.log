@@ -1,0 +1,46 @@
+[2023-12-16T21:13:26.346+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook manual__2023-12-16T21:13:24.477157+00:00 [queued]>
+[2023-12-16T21:13:26.371+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook manual__2023-12-16T21:13:24.477157+00:00 [queued]>
+[2023-12-16T21:13:26.372+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-12-16T21:13:26.401+0000] {taskinstance.py:1382} INFO - Executing <Task(DatabricksSubmitRunOperator): trigger_databricks_notebook> on 2023-12-16 21:13:24.477157+00:00
+[2023-12-16T21:13:26.411+0000] {standard_task_runner.py:57} INFO - Started process 428 to run task
+[2023-12-16T21:13:26.419+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'databricks_dag', 'trigger_databricks_notebook', 'manual__2023-12-16T21:13:24.477157+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/databricks_test.py', '--cfg-path', '/tmp/tmpjj42sook']
+[2023-12-16T21:13:26.421+0000] {standard_task_runner.py:85} INFO - Job 54: Subtask trigger_databricks_notebook
+[2023-12-16T21:13:26.695+0000] {task_command.py:416} INFO - Running <TaskInstance: databricks_dag.trigger_databricks_notebook manual__2023-12-16T21:13:24.477157+00:00 [running]> on host 2d83c0298000
+[2023-12-16T21:13:27.196+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='databricks_dag' AIRFLOW_CTX_TASK_ID='trigger_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2023-12-16T21:13:24.477157+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-16T21:13:24.477157+00:00'
+[2023-12-16T21:13:27.246+0000] {base.py:73} INFO - Using connection ID 'databricks_default' for task execution.
+[2023-12-16T21:13:27.263+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:13:27.824+0000] {databricks.py:73} INFO - Run submitted with run_id: 606505814846356
+[2023-12-16T21:13:27.829+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:13:28.063+0000] {databricks.py:78} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/1031485861865647/run/606505814846356
+[2023-12-16T21:13:28.065+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:13:28.321+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': ''}
+[2023-12-16T21:13:28.321+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/1031485861865647/run/606505814846356
+[2023-12-16T21:13:28.322+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:13:58.353+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:13:58.678+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:13:58.680+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/1031485861865647/run/606505814846356
+[2023-12-16T21:13:58.680+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:14:28.707+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:14:28.963+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:14:28.964+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/1031485861865647/run/606505814846356
+[2023-12-16T21:14:28.965+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:14:58.995+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:14:59.224+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:14:59.226+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/1031485861865647/run/606505814846356
+[2023-12-16T21:14:59.227+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:15:29.257+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:15:29.492+0000] {databricks.py:90} INFO - trigger_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': None, 'state_message': 'Waiting for cluster'}
+[2023-12-16T21:15:29.494+0000] {databricks.py:91} INFO - View run status, Spark UI, and logs at https://adb-2256532642969647.7.azuredatabricks.net/?o=2256532642969647#job/1031485861865647/run/606505814846356
+[2023-12-16T21:15:29.494+0000] {databricks.py:92} INFO - Sleeping for 30 seconds.
+[2023-12-16T21:15:59.526+0000] {databricks.py:170} INFO - Using token auth. 
+[2023-12-16T21:15:59.820+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/operators/databricks.py", line 316, in execute
+    _handle_databricks_operator_execution(self, hook, self.log, context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/operators/databricks.py", line 88, in _handle_databricks_operator_execution
+    raise AirflowException(error_message)
+airflow.exceptions.AirflowException: trigger_databricks_notebook failed with terminal state: {'life_cycle_state': 'INTERNAL_ERROR', 'result_state': 'FAILED', 'state_message': 'Cluster 1216-211327-6nyz5sy was terminated while waiting on it to be ready: Cluster 1216-211327-6nyz5sy is in unexpected state Terminated: AZURE_QUOTA_EXCEEDED_EXCEPTION(CLIENT_ERROR): azure_error_code:QuotaExceeded,azure_error_message:Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: FranceCentral, Current Limit: 6, Current Usage: 4, Additional Required: 4, (Minimum) New Limit Required: 8. Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%2294071206-dad9-464d-9f27-396879057625%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22FranceCentral%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B% ...\n***WARNING: message truncated. Skipped 1393 bytes of output**\n\n'}
+[2023-12-16T21:15:59.826+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=databricks_dag, task_id=trigger_databricks_notebook, execution_date=20231216T211324, start_date=20231216T211326, end_date=20231216T211559
+[2023-12-16T21:15:59.846+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 54 for task trigger_databricks_notebook (trigger_databricks_notebook failed with terminal state: {'life_cycle_state': 'INTERNAL_ERROR', 'result_state': 'FAILED', 'state_message': 'Cluster 1216-211327-6nyz5sy was terminated while waiting on it to be ready: Cluster 1216-211327-6nyz5sy is in unexpected state Terminated: AZURE_QUOTA_EXCEEDED_EXCEPTION(CLIENT_ERROR): azure_error_code:QuotaExceeded,azure_error_message:Operation could not be completed as it results in exceeding approved Total Regional Cores quota. Additional details - Deployment Model: Resource Manager, Location: FranceCentral, Current Limit: 6, Current Usage: 4, Additional Required: 4, (Minimum) New Limit Required: 8. Submit a request for Quota increase at https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/%7B%22subscriptionId%22:%2294071206-dad9-464d-9f27-396879057625%22,%22command%22:%22openQuotaApprovalBlade%22,%22quotas%22:[%7B%22location%22:%22FranceCentral%22,%22providerId%22:%22Microsoft.Compute%22,%22resourceName%22:%22cores%22,%22quotaRequest%22:%7B% ...\n***WARNING: message truncated. Skipped 1393 bytes of output**\n\n'}; 428)
+[2023-12-16T21:15:59.866+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-16T21:15:59.892+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

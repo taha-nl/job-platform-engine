@@ -1,0 +1,7 @@
+selenium
+pymongo
+pandas
+apache-airflow-providers-databricks==1.0.1
+requests
+beautifulsoup4
+scrapingbee

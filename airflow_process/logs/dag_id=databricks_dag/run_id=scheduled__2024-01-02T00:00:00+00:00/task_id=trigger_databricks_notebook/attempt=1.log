@@ -1,0 +1,58 @@
+[2024-01-03T07:37:46.940+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-01-03T07:37:47.051+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-01-03T07:37:47.054+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-03T07:37:47.108+0000] {taskinstance.py:2192} INFO - Executing <Task(DatabricksRunNowOperator): trigger_databricks_notebook> on 2024-01-02 00:00:00+00:00
+[2024-01-03T07:37:47.132+0000] {standard_task_runner.py:60} INFO - Started process 250 to run task
+[2024-01-03T07:37:47.154+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'databricks_dag', 'trigger_databricks_notebook', 'scheduled__2024-01-02T00:00:00+00:00', '--job-id', '159', '--raw', '--subdir', 'DAGS_FOLDER/databricks_test.py', '--cfg-path', '/tmp/tmp8jzz2_px']
+[2024-01-03T07:37:47.157+0000] {standard_task_runner.py:88} INFO - Job 159: Subtask trigger_databricks_notebook
+[2024-01-03T07:37:47.495+0000] {task_command.py:423} INFO - Running <TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2024-01-02T00:00:00+00:00 [running]> on host f01482236d7b
+[2024-01-03T07:37:49.840+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='databricks_dag' AIRFLOW_CTX_TASK_ID='trigger_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2024-01-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-02T00:00:00+00:00'
+[2024-01-03T07:37:49.980+0000] {base.py:83} INFO - Using connection ID 'databricks_default' for task execution.
+[2024-01-03T07:37:49.994+0000] {databricks.py:170} INFO - Using token auth. 
+[2024-01-03T07:37:50.777+0000] {databricks.py:224} ERROR - Attempt 1 API Request to Databricks failed with reason: HTTPSConnectionPool(host='adb-2256532642969647.7.azuredatabricks.net', port=443): Max retries exceeded with url: /api/2.0/jobs/run-now (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa5a87b82e0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-01-03T07:37:51.935+0000] {databricks.py:224} ERROR - Attempt 2 API Request to Databricks failed with reason: HTTPSConnectionPool(host='adb-2256532642969647.7.azuredatabricks.net', port=443): Max retries exceeded with url: /api/2.0/jobs/run-now (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa5a87b8310>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-01-03T07:37:53.028+0000] {databricks.py:224} ERROR - Attempt 3 API Request to Databricks failed with reason: HTTPSConnectionPool(host='adb-2256532642969647.7.azuredatabricks.net', port=443): Max retries exceeded with url: /api/2.0/jobs/run-now (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa5a87b8340>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-01-03T07:37:53.082+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/operators/databricks.py", line 510, in execute
+    self.run_id = hook.run_now(self.json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 235, in run_now
+    response = self._do_api_call(RUN_NOW_ENDPOINT, json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 216, in _do_api_call
+    raise AirflowException(
+airflow.exceptions.AirflowException: API requests to Databricks failed 3 times. Giving up.
+[2024-01-03T07:37:53.135+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=databricks_dag, task_id=trigger_databricks_notebook, execution_date=20240102T000000, start_date=20240103T073746, end_date=20240103T073753
+[2024-01-03T07:37:53.164+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 159 for task trigger_databricks_notebook (API requests to Databricks failed 3 times. Giving up.; 250)
+[2024-01-03T07:37:53.198+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-01-03T07:37:53.236+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-01-03T07:39:25.391+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-01-03T07:39:25.577+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2024-01-02T00:00:00+00:00 [queued]>
+[2024-01-03T07:39:25.589+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-03T07:39:25.755+0000] {taskinstance.py:2192} INFO - Executing <Task(DatabricksRunNowOperator): trigger_databricks_notebook> on 2024-01-02 00:00:00+00:00
+[2024-01-03T07:39:25.768+0000] {standard_task_runner.py:60} INFO - Started process 274 to run task
+[2024-01-03T07:39:25.801+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'databricks_dag', 'trigger_databricks_notebook', 'scheduled__2024-01-02T00:00:00+00:00', '--job-id', '160', '--raw', '--subdir', 'DAGS_FOLDER/databricks_test.py', '--cfg-path', '/tmp/tmphl894n2y']
+[2024-01-03T07:39:25.814+0000] {standard_task_runner.py:88} INFO - Job 160: Subtask trigger_databricks_notebook
+[2024-01-03T07:39:26.887+0000] {task_command.py:423} INFO - Running <TaskInstance: databricks_dag.trigger_databricks_notebook scheduled__2024-01-02T00:00:00+00:00 [running]> on host f01482236d7b
+[2024-01-03T07:39:27.590+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='databricks_dag' AIRFLOW_CTX_TASK_ID='trigger_databricks_notebook' AIRFLOW_CTX_EXECUTION_DATE='2024-01-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-02T00:00:00+00:00'
+[2024-01-03T07:39:27.657+0000] {base.py:83} INFO - Using connection ID 'databricks_default' for task execution.
+[2024-01-03T07:39:27.674+0000] {databricks.py:170} INFO - Using token auth. 
+[2024-01-03T07:39:27.834+0000] {databricks.py:224} ERROR - Attempt 1 API Request to Databricks failed with reason: HTTPSConnectionPool(host='adb-2256532642969647.7.azuredatabricks.net', port=443): Max retries exceeded with url: /api/2.0/jobs/run-now (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa5a87b82e0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-01-03T07:39:28.879+0000] {databricks.py:224} ERROR - Attempt 2 API Request to Databricks failed with reason: HTTPSConnectionPool(host='adb-2256532642969647.7.azuredatabricks.net', port=443): Max retries exceeded with url: /api/2.0/jobs/run-now (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa5a87b8310>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-01-03T07:39:29.933+0000] {databricks.py:224} ERROR - Attempt 3 API Request to Databricks failed with reason: HTTPSConnectionPool(host='adb-2256532642969647.7.azuredatabricks.net', port=443): Max retries exceeded with url: /api/2.0/jobs/run-now (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa5a87b8340>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-01-03T07:39:29.986+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/operators/databricks.py", line 510, in execute
+    self.run_id = hook.run_now(self.json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 235, in run_now
+    response = self._do_api_call(RUN_NOW_ENDPOINT, json)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/databricks/hooks/databricks.py", line 216, in _do_api_call
+    raise AirflowException(
+airflow.exceptions.AirflowException: API requests to Databricks failed 3 times. Giving up.
+[2024-01-03T07:39:30.048+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=databricks_dag, task_id=trigger_databricks_notebook, execution_date=20240102T000000, start_date=20240103T073925, end_date=20240103T073930
+[2024-01-03T07:39:30.158+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 160 for task trigger_databricks_notebook (API requests to Databricks failed 3 times. Giving up.; 274)
+[2024-01-03T07:39:30.370+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-01-03T07:39:30.636+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,23 @@
+[2024-01-03T13:31:07.304+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: job_process.get_indeed_data manual__2024-01-03T13:30:59.436790+00:00 [queued]>
+[2024-01-03T13:31:07.336+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: job_process.get_indeed_data manual__2024-01-03T13:30:59.436790+00:00 [queued]>
+[2024-01-03T13:31:07.343+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-03T13:31:07.397+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): get_indeed_data> on 2024-01-03 13:30:59.436790+00:00
+[2024-01-03T13:31:07.434+0000] {standard_task_runner.py:60} INFO - Started process 2915 to run task
+[2024-01-03T13:31:07.471+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'job_process', 'get_indeed_data', 'manual__2024-01-03T13:30:59.436790+00:00', '--job-id', '167', '--raw', '--subdir', 'DAGS_FOLDER/job_process.py', '--cfg-path', '/tmp/tmp7nhlrdv3']
+[2024-01-03T13:31:07.478+0000] {standard_task_runner.py:88} INFO - Job 167: Subtask get_indeed_data
+[2024-01-03T13:31:07.682+0000] {task_command.py:423} INFO - Running <TaskInstance: job_process.get_indeed_data manual__2024-01-03T13:30:59.436790+00:00 [running]> on host f01482236d7b
+[2024-01-03T13:31:08.145+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='job_process' AIRFLOW_CTX_TASK_ID='get_indeed_data' AIRFLOW_CTX_EXECUTION_DATE='2024-01-03T13:30:59.436790+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-03T13:30:59.436790+00:00'
+[2024-01-03T13:31:14.213+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  200
+[2024-01-03T13:31:20.119+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  200
+[2024-01-03T13:31:28.671+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  200
+[2024-01-03T13:31:36.382+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  200
+[2024-01-03T13:31:41.905+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  200
+[2024-01-03T13:31:47.221+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  200
+[2024-01-03T13:31:53.500+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  200
+[2024-01-03T13:32:00.358+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  200
+[2024-01-03T13:32:12.943+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  500
+[2024-01-03T13:32:17.730+0000] {logging_mixin.py:188} INFO - Response HTTP Status Code:  200
+[2024-01-03T13:32:18.067+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-01-03T13:32:18.104+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=job_process, task_id=get_indeed_data, execution_date=20240103T133059, start_date=20240103T133107, end_date=20240103T133218
+[2024-01-03T13:32:18.174+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-01-03T13:32:18.205+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

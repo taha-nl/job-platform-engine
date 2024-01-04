@@ -1,0 +1,4 @@
+./airflow_process/logs/*
+./airflow_process/data/*
+./airflow_process/selenium-installation.sh
+./scraping_data_glassdoor/*
