@@ -1,0 +1,32 @@
+[2024-01-06T07:29:26.944+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: job_process.transformed_data manual__2024-01-06T07:27:45.202528+00:00 [queued]>
+[2024-01-06T07:29:26.979+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: job_process.transformed_data manual__2024-01-06T07:27:45.202528+00:00 [queued]>
+[2024-01-06T07:29:26.981+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-06T07:29:27.075+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): transformed_data> on 2024-01-06 07:27:45.202528+00:00
+[2024-01-06T07:29:27.126+0000] {standard_task_runner.py:60} INFO - Started process 11403 to run task
+[2024-01-06T07:29:27.195+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'job_process', 'transformed_data', 'manual__2024-01-06T07:27:45.202528+00:00', '--job-id', '197', '--raw', '--subdir', 'DAGS_FOLDER/job_process.py', '--cfg-path', '/tmp/tmpllqd1ns7']
+[2024-01-06T07:29:27.216+0000] {standard_task_runner.py:88} INFO - Job 197: Subtask transformed_data
+[2024-01-06T07:29:27.422+0000] {task_command.py:423} INFO - Running <TaskInstance: job_process.transformed_data manual__2024-01-06T07:27:45.202528+00:00 [running]> on host f01482236d7b
+[2024-01-06T07:29:27.706+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='job_process' AIRFLOW_CTX_TASK_ID='transformed_data' AIRFLOW_CTX_EXECUTION_DATE='2024-01-06T07:27:45.202528+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-06T07:27:45.202528+00:00'
+[2024-01-06T07:29:30.738+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/job_process.py", line 168, in transform_data
+    df_rekrute.drop("_id",inplace=True)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 5258, in drop
+    return super().drop(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 4549, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 4591, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 6699, in drop
+    raise KeyError(f"{list(labels[mask])} not found in axis")
+KeyError: "['_id'] not found in axis"
+[2024-01-06T07:29:30.776+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=job_process, task_id=transformed_data, execution_date=20240106T072745, start_date=20240106T072926, end_date=20240106T072930
+[2024-01-06T07:29:30.800+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 197 for task transformed_data ("['_id'] not found in axis"; 11403)
+[2024-01-06T07:29:30.822+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-01-06T07:29:30.905+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -16,7 +16,7 @@ from datetime import datetime
 
 def mongo_connection(collection_name):
 
-    mongoclient = pymongo.MongoClient("")
+    mongoclient = pymongo.MongoClient("mongodb+srv://mongoinpproject:FWLCihjxFGG4UL8W@cluster0.skjn4mk.mongodb.net/?retryWrites=true&w=majority")
     database = mongoclient["jobs_database"]
     collection = database[collection_name]
 
@@ -108,7 +108,7 @@ def get_indeed_data():
 
     collection = mongo_connection("indeed_collection")
 
-    client = ScrapingBeeClient(api_key='')
+    client = ScrapingBeeClient(api_key='29BAGFEYK0YL5BERMHXACA6NINGRST4AM6Q69X4H1YBXTHD580J1UZ2VWTAY8AHUSEVEBUOBTE8Q8THE')
 
     # first page
     response = client.get('https://ma.indeed.com/jobs?q=offre+d%27emploi&fromage=1&vjk=39df24deb59b0e39&start=0')
@@ -165,6 +165,8 @@ def transform_data():
     data_rekrute = list(cursor_rekrute)
     df_rekrute = pd.DataFrame(data_rekrute)
     df_indeed = pd.DataFrame(data_indeed)
+    df_rekrute.drop("_id",axis = 1,inplace=True)
+    df_indeed.drop("_id",axis = 1,inplace=True)
 
     df_rekrute["jobLocation"] = df_rekrute["jobLocation"].apply(lambda x: x.replace("(Maroc)","").strip())
 
@@ -184,11 +186,6 @@ def transform_data():
         transformed_collection.insert_one(dict(row_indeed[1]))
 
 
-
-
-
-
-
 with DAG('job_process', start_date=datetime(2024, 1, 3),
             schedule_interval="@daily",catchup=False) as dag:
 
@@ -204,7 +201,6 @@ with DAG('job_process', start_date=datetime(2024, 1, 3),
                 task_id = 'transformed_data',
                 python_callable = transform_data
         )
-
 
         [get_data_rekrute,get_data_indeed] >> data_transformation
 

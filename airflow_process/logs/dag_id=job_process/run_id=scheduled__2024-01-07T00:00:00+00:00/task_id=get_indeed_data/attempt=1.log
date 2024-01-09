@@ -1,0 +1,9 @@
+[2024-01-09T16:07:11.901+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: job_process.get_indeed_data scheduled__2024-01-07T00:00:00+00:00 [queued]>
+[2024-01-09T16:07:11.970+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: job_process.get_indeed_data scheduled__2024-01-07T00:00:00+00:00 [queued]>
+[2024-01-09T16:07:11.971+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-09T16:07:12.090+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): get_indeed_data> on 2024-01-07 00:00:00+00:00
+[2024-01-09T16:07:12.157+0000] {standard_task_runner.py:60} INFO - Started process 132 to run task
+[2024-01-09T16:07:12.241+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'job_process', 'get_indeed_data', 'scheduled__2024-01-07T00:00:00+00:00', '--job-id', '208', '--raw', '--subdir', 'DAGS_FOLDER/job_process.py', '--cfg-path', '/tmp/tmpqwgr7vgs']
+[2024-01-09T16:07:12.331+0000] {standard_task_runner.py:88} INFO - Job 208: Subtask get_indeed_data
+[2024-01-09T16:07:13.117+0000] {task_command.py:423} INFO - Running <TaskInstance: job_process.get_indeed_data scheduled__2024-01-07T00:00:00+00:00 [running]> on host f01482236d7b
+[2024-01-09T16:07:14.480+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='job_process' AIRFLOW_CTX_TASK_ID='get_indeed_data' AIRFLOW_CTX_EXECUTION_DATE='2024-01-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-07T00:00:00+00:00'
